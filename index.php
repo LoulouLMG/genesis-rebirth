@@ -1,16 +1,15 @@
 <?php
-// include the configs / constants for the database connection
-require_once("config/db.php");
-// load the login class
-require_once("classes/Login.php");
 
-// create a login object. when this object is created, it will do all login/logout stuff automatically
-// so this single line handles the entire login process. 
-$login = new Login();
+/**
+ * GENESIS-REBIRTH
+ *
+ * @author LoulouLMG
+ * @link https://github.com/LoulouLMG/genesis-rebirth/
+ */
+
+// Load application config (error reporting, database credentials etc.)
+require 'application/config/config.php';
 
 
-if ($login->isUserLoggedIn() == true) {
-   echo('vous etes connecte');
-} else {
-   echo('non connecte');
-}
+// Start the application
+$app = new Application();
