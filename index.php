@@ -1,4 +1,4 @@
-<? php
+<?php
 // include the configs / constants for the database connection
 require_once("config/db.php");
 // load the login class
@@ -10,7 +10,7 @@ $login = new Login();
 
 
 if ($login->isUserLoggedIn() == true) {
-   
+   echo('vous etes connecte');
 } else {
-   
+   echo('non connecte');
 }
