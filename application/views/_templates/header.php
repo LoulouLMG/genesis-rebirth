@@ -15,11 +15,4 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="<?php echo URL; ?>public/js/application.js"></script>
 </head>
-<body>
-    <?php if (Session::get('user_logged_in') == true):?>
-        <?php echo('CONNECTE')?>        
-    <?php endif; ?>
 
-    <?php if (Session::get('user_logged_in') == false):?>
-        <?php echo('NON CONNECTE')?>
-    <?php endif; ?>

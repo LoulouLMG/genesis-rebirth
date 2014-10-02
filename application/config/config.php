@@ -20,10 +20,11 @@ define('AVATAR_PATH', 'public/avatars/');
 /**
  * Configuration for: Database Connection
  */
-define("DB_HOST", "127.0.0.1");
-define("DB_NAME", "login");
+define('DB_TYPE', 'mysql');
+define("DB_HOST", "localhost");
+define("DB_NAME", "genesis-rebirth");
 define("DB_USER", "root");
-define("DB_PASS", "mysql");
+define("DB_PASS", "");
 
 /**
  * Configuration for: Cookies

@@ -1,3 +1,12 @@
+<body>
+    <?php if (Session::get('user_logged_in') == true):?>
+        <?php echo('Tu es CONNECTE')?>        
+    <?php endif; ?>
+
+    <?php if (Session::get('user_logged_in') == false):?>
+        <?php echo("Tu es NON CONNECTE (normal le login n'est pas encore implementé dude...)")?>
+    <?php endif; ?>
+
 <div class="content">
     <h1>Index</h1>
 
@@ -15,7 +24,7 @@
         Hello !.
         <br/><br/>
         
-        <span style='font-weight: bold;'>Ceci est le debut de la reussite !</span>,
+        <span style='font-weight: bold;'>Ceci est le debut de la reussite !</span>
         Des millions de gens pourront jouer simultanément sur ce jeu du futur x)
     </p>
 </div>
