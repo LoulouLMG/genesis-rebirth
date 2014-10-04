@@ -3,7 +3,7 @@
  * Configuration for: Base URL
  * This is the base url of the app.
  */
-define('URL', 'http://genesis-rebirth');
+define('URL', 'http://genesis-rebirth/');
 
 /**
  * Configuration for: Folders
@@ -13,6 +13,7 @@ define('CONTROLLER_PATH', 'application/controllers/');
 define('MODELS_PATH', 'application/models/');
 define('VIEWS_PATH', 'application/views/');
 define('IMG_PATH', 'public/img');
+//define('STYLE_PATH','public/css');
 // Make this folder writable ( chmod 777)
 define('AVATAR_PATH', 'public/avatars/');
 

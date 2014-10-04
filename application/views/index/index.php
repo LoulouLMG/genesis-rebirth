@@ -1,30 +1,15 @@
-<body>
-    <?php if (Session::get('user_logged_in') == true):?>
-        <?php echo('Tu es CONNECTE')?>        
-    <?php endif; ?>
-
-    <?php if (Session::get('user_logged_in') == false):?>
-        <?php echo("Tu es NON CONNECTE (normal le login n'est pas encore implementé dude...)")?>
-    <?php endif; ?>
-
 <div class="content">
-    <h1>Index</h1>
-
+  <br/><br/><br/><br/>
+    <h2>Index</h2>
+    <br/><br/>
     <!-- echo out the system feedback (error and success messages) -->
     <?php $this->renderFeedbackMessages(); ?>
 
-    <p>
-        Cette boite entre le header et le footer est le contenu de views/index/index.php,
-        donc le contenu de la vue index/index.
-        <br/>
-        Affiché grace a la methode index du controlleur index (dans controllers/index.php).
-    </p>
     <h3>Regardes, ca marche :</h3>
-    <p>
-        Hello !.
+    <br/>
+    <p> Hello !
         <br/><br/>
-        
-        <span style='font-weight: bold;'>Ceci est le debut de la reussite !</span>
-        Des millions de gens pourront jouer simultanément sur ce jeu du futur x)
+        <span style='font-weight: bold;'>Ceci est le debut de la réussite !</span>
+        Des millions de gens pourront jouer simultanément sur ce jeu du futur !
     </p>
 </div>

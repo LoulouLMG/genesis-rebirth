@@ -23,7 +23,6 @@ class Application
     public function __construct()
     {
         $this->splitUrl();
-
         // check for controller: is the url_controller NOT empty ?
         if ($this->url_controller) {
             // check for controller: does such a controller exist ?
@@ -62,9 +61,11 @@ class Application
         // if url_controller is empty, simply show the main page (index/index)
         } else {
             // invalid URL, so simply show home/index
+            
             require CONTROLLER_PATH . 'index.php';
             $controller = new Index();
             $controller->index();
+            
         }
     }
 
@@ -73,10 +74,10 @@ class Application
      */
     private function splitUrl()
     {
-        if (isset($_GET['url'])) {
+        if (isset($_GET['page'])) {
 
             // split URL
-            $url = rtrim($_GET['url'], '/');
+            $url = rtrim($_GET['page'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $url = explode('/', $url);
 
@@ -85,7 +86,7 @@ class Application
             $this->url_action = (isset($url[1]) ? $url[1] : null);
             $this->url_parameter_1 = (isset($url[2]) ? $url[2] : null);
             $this->url_parameter_2 = (isset($url[3]) ? $url[3] : null);
-            $this->url_parameter_3 = (isset($url[4]) ? $url[4] : null);
+            $this->url_parameter_3 = (isset($url[4]) ? $url[4] : null);  
         }
     }
 }
